@@ -583,6 +583,14 @@ message StoreStats {
     repeated uint64 damaged_regions_id = 23;
     // If the apply worker is busy, namely high apply wait duration
     bool is_apply_busy = 24;
+    // Send snapshot size is the size that needs to send. 
+    uint64 send_snapshot_size=25;
+    // Sent snapshot size is the size that has sent already.
+    uint64 sent_snapshot_szie=26;
+    // Receive snapshot size is the size that needs to receive.
+    uint64 receive_snapshot_size=27;
+    // Received snapshot size is the size that has received already.
+    uint64 received_snapshot_size=28;
 }
 
 message PeerReport {
