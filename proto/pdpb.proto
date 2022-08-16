@@ -585,6 +585,9 @@ message StoreStats {
     repeated uint64 damaged_regions_id = 23;
     // If the apply worker is busy, namely high apply wait duration
     bool is_apply_busy = 24;
+
+    uint64 pending_receiving_size = 25;
+    uint64 received_size = 26;
 }
 
 message PeerReport {
