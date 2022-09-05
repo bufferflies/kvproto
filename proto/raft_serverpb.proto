@@ -46,6 +46,7 @@ message SnapshotMeta {
     // true means this snapshot is triggered for load balance
     bool for_balance = 2;
     uint64 start = 3;
+    uint64 generate_sec = 4;
 }
 
 message SnapshotChunk {
