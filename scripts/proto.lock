@@ -10272,6 +10272,16 @@
                 "id": 5,
                 "name": "total_rpc_wall_time_ns",
                 "type": "uint64"
+              },
+              {
+                "id": 6,
+                "name": "grpc_execute_time_ns",
+                "type": "uint64"
+              },
+              {
+                "id": 7,
+                "name": "grpc_wait_time_ns",
+                "type": "uint64"
               }
             ]
           },
@@ -19630,21 +19640,6 @@
             ]
           },
           {
-            "name": "GrpcStats",
-            "fields": [
-              {
-                "id": 1,
-                "name": "grpc_wait_us",
-                "type": "float"
-              },
-              {
-                "id": 2,
-                "name": "grpc_total_us",
-                "type": "uint64"
-              }
-            ]
-          },
-          {
             "name": "BatchCommandsResponse",
             "fields": [
               {
@@ -19663,11 +19658,6 @@
                 "id": 3,
                 "name": "transport_layer_load",
                 "type": "uint64"
-              },
-              {
-                "id": 4,
-                "name": "grpc_stats",
-                "type": "GrpcStats"
               }
             ],
             "messages": [
