@@ -19630,6 +19630,21 @@
             ]
           },
           {
+            "name": "GrpcStats",
+            "fields": [
+              {
+                "id": 1,
+                "name": "grpc_wait_us",
+                "type": "float"
+              },
+              {
+                "id": 2,
+                "name": "grpc_total_us",
+                "type": "uint64"
+              }
+            ]
+          },
+          {
             "name": "BatchCommandsResponse",
             "fields": [
               {
@@ -19648,6 +19663,11 @@
                 "id": 3,
                 "name": "transport_layer_load",
                 "type": "uint64"
+              },
+              {
+                "id": 4,
+                "name": "grpc_stats",
+                "type": "GrpcStats"
               }
             ],
             "messages": [

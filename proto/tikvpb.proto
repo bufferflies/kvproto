@@ -188,11 +188,17 @@ message BatchCommandsRequest {
     }
 }
 
+message GrpcStats{
+    float grpc_wait_us=1;
+    uint64 grpc_total_us=2;
+}
+
 message BatchCommandsResponse {
     repeated Response responses = 1;
     repeated uint64 request_ids = 2;
     // 280 means TiKV gRPC cpu usage is 280%.
     uint64 transport_layer_load = 3;
+    GrpcStats grpc_stats = 4;
 
     message Response {
         oneof cmd {
@@ -240,6 +246,7 @@ message BatchCommandsResponse {
         // Reserved for deprecated VerKV
         reserved 27 to 32;
     }
+   
 }
 
 message BatchRaftMessage {
